@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePU-sz-eBw">
+                                <rect key="frame" x="88" y="120" width="200" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="01j-ui-DYn"/>
+                                    <constraint firstAttribute="height" constant="300" id="ROA-zu-pm3"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yYT-Ay-0Dw">
+                                <rect key="frame" x="16" y="537" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1h-9S-0KZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="30"/>
+                                        <state key="normal" title="连接设备"/>
+                                        <connections>
+                                            <action selector="connect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQx-6n-zMP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cds-gv-OG0">
+                                        <rect key="frame" x="114.5" y="0.0" width="114" height="30"/>
+                                        <state key="normal" title="选择图片"/>
+                                        <connections>
+                                            <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fjA-3L-s3J"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xY-J0-eWg">
+                                        <rect key="frame" x="228.5" y="0.0" width="114.5" height="30"/>
+                                        <state key="normal" title="发送图片"/>
+                                        <connections>
+                                            <action selector="sendImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3fE-Fi-bfB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yYT-Ay-0Dw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WNw-gT-6Jb"/>
+                            <constraint firstItem="ePU-sz-eBw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="fTc-fN-6sk"/>
+                            <constraint firstItem="ePU-sz-eBw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fk1-LS-J5c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yYT-Ay-0Dw" secondAttribute="bottom" constant="100" id="gg3-Mw-IQi"/>
+                            <constraint firstItem="yYT-Ay-0Dw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mHN-IP-qnr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yYT-Ay-0Dw" secondAttribute="trailing" id="oXK-vW-o5a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectedImageView" destination="ePU-sz-eBw" id="IQJ-0V-jbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
